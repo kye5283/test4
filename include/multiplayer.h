@@ -5,11 +5,12 @@
 void multiplayer(int x, int y)
 {
 	srand(time(NULL));
-	int n, count = 0;
+
+	int n, count = 0, i;
 	int min = 1, max = x;
 	int key = rand() % x + 1;
 	int player[100];
-	for (int i = 0; i < y; i++)
+	for (i = 0; i < y; i++)
 	{
 		player[i] = i + 1;
 	}
@@ -27,6 +28,7 @@ void multiplayer(int x, int y)
 			else
 			{
 				printf("碰!! 玩家 %d輸了!\n\n是否再來一局 (Y/N)? ", player[count % y]);
+				key = rand() % x + 1;
 				count = -1;
 				min = 1;
 				max = x;
@@ -37,4 +39,6 @@ void multiplayer(int x, int y)
 		else
 			printf("輸入數值錯誤.\n");
 	} while (c[0] == 'y' || c[0] == 'Y');
+
+
 }

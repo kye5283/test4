@@ -8,6 +8,13 @@ int main(void)
 	int a, b, i;
 	printf("請輸入遊玩模式，(單人模式=1,多人模式=2):");
 	scanf("%d", &i);
+	while ((i != 1) && (i != 2)) 
+	{
+		printf("模式輸入錯誤!!!請重新輸入\n\n");
+		printf("請輸入遊玩模式，(單人模式=1,多人模式=2):");
+		scanf("%d", &i);
+	}
+
 	switch (i)
 	{
 	case 1:
@@ -25,4 +32,5 @@ int main(void)
 	}
 	system("pause");
 	return 0;
+
 }

@@ -24,6 +24,7 @@ void solo(int x)
 					min = n + 1;
 				else {
 					printf("碰!! 你輸了!\n\n是否再來一局 (Y/N)? ");
+					key = rand() % x + 1;
 					count = -1;
 					min = 1;
 					max = x;
@@ -47,6 +48,7 @@ void solo(int x)
 					min = i + 1;
 				else {
 					printf("碰!! 電腦輸了!\n\n是否再來一局 (Y/N)? ");
+					key = rand() % x + 1;
 					count = -1;
 					min = 1;
 					max = x;
